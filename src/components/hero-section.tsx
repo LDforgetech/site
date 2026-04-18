@@ -1,4 +1,5 @@
 import heroGradient from "@/assets/hero-gradient.png";
+import DemoOne from "@/components/demo-onde";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code2 } from "lucide-react";
 
@@ -7,14 +8,15 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated gradient background */}
       <div className="absolute inset-0">
-        <img
+        {/* <img
           src={heroGradient}
           alt=""
           className="w-full h-full object-cover animate-gradient-drift"
           aria-hidden="true"
-        />
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-background/20" />
+        /> */}
+        <DemoOne />
+        {/* Dark overlay for text readability
+        <div className="absolute inset-0 bg-background/20" /> */}
       </div>
 
       {/* Content */}
