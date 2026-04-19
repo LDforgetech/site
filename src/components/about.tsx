@@ -1,8 +1,28 @@
-const stats = [
-  { value: "150+", label: "Projetos entregues" },
-  { value: "8+", label: "Anos de experiência" },
-  { value: "50+", label: "Clientes satisfeitos" },
-  { value: "99%", label: "Taxa de satisfação" },
+import { Accessibility, Eye, Gauge, Layers } from "lucide-react";
+
+const pillars = [
+  {
+    icon: Gauge,
+    title: "Performance (Core Web Vitals)",
+    description: "Produtos otimizados para carregar rápido e reter usuários.",
+  },
+  {
+    icon: Accessibility,
+    title: "Acessibilidade (a11y)",
+    description:
+      "Sistemas construídos para serem utilizáveis por qualquer pessoa, em qualquer dispositivo.",
+  },
+  {
+    icon: Layers,
+    title: "Arquitetura Moderna",
+    description:
+      "Foco em ecossistemas robustos com as melhores ferramentas do mercado.",
+  },
+  {
+    icon: Eye,
+    title: "Transparência Total",
+    description: "Acompanhamento de perto em cada etapa do desenvolvimento.",
+  },
 ];
 
 const AboutSection = () => {
@@ -29,18 +49,21 @@ const AboutSection = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-6">
-            {stats.map((stat) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {pillars.map((pillar) => (
               <div
-                key={stat.label}
-                className="p-8 rounded-2xl border border-border bg-background text-center"
+                key={pillar.title}
+                className="p-6 rounded-2xl border flex flex-col items-center border-border bg-background hover:border-primary/40 transition-colors"
               >
-                <div className="text-4xl md:text-5xl font-bold text-gradient mb-2">
-                  {stat.value}
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <pillar.icon className="w-6 h-6 text-primary" />
                 </div>
-                <div className="text-muted-foreground text-sm">
-                  {stat.label}
-                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">
+                  {pillar.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {pillar.description}
+                </p>
               </div>
             ))}
           </div>

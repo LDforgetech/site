@@ -1,12 +1,10 @@
-// import { Code2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "../assets/logo.svg";
-// import { Code2 } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-foreground/5 bg-background/60 backdrop-blur-xl">
-      <div className="container mx-auto px-6 h-16 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 right-0 z-50">
+      <div className="container py-2 px-4 rounded-2xl mt-2 w-fit flex items-center justify-between gap-16 border border-foreground/5 bg-background/60 backdrop-blur-xl">
         <img src={logo} alt="logo" className="w-40" />
         <div className="hidden md:flex items-center gap-8">
           <a
