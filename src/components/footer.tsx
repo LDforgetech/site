@@ -1,6 +1,4 @@
-// import Logo from "@/components/logo";
-import { Code2 } from "lucide-react";
-// import { Code2 } from "lucide-react";
+import logo from "../assets/logo.svg";
 
 const Footer = () => {
   return (
@@ -8,14 +6,8 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           <div className="md:col-span-2">
-            {/* <Logo /> */}
-            <div className="flex items-center gap-2 mb-4">
-              <Code2 className="w-6 h-6 text-primary" />
-              <span className="font-bold text-lg text-foreground">
-                SuaEmpresa
-              </span>
-            </div>
-            <p className="text-muted-foreground max-w-sm leading-relaxed">
+            <img src={logo} alt="logo" className="w-60" />
+            <p className="text-muted-foreground text-left mt-3 max-w-sm leading-relaxed">
               Desenvolvemos software sob demanda que transforma a maneira como
               empresas operam e crescem.
             </p>
@@ -62,8 +54,8 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Contato</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li>contato@suaempresa.com</li>
-              <li>+55 (11) 99999-9999</li>
+              <li>ldforgetech@gmail.com</li>
+              {/* <li>+55 (11) 99999-9999</li> */}
               <li>São Paulo, SP</li>
             </ul>
           </div>
@@ -71,7 +63,7 @@ const Footer = () => {
 
         <div className="border-t border-border pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} SuaEmpresa. Todos os direitos
+            © {new Date().getFullYear()} LD Forgetech. Todos os direitos
             reservados.
           </p>
         </div>
