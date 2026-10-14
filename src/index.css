@@ -1,89 +1,79 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Cal+Sans&family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Lexend:wght@100..900&display=swap");
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    --background: 240 20% 6%;
-    --foreground: 240 10% 95%;
+@theme {
+  --color-violet: hsl(var(--violet));
+  --color-purple: hsl(var(--purple));
+  --color-gray: hsl(var(--gray));
+  --color-black: var(--black);
+  --color-white: var(--white);
 
-    --card: 240 15% 10%;
-    --card-foreground: 240 10% 95%;
+  --radius: 6px;
 
-    --popover: 240 15% 10%;
-    --popover-foreground: 240 10% 95%;
+  --font-sans: "Lexend", sans-serif;
+  --font-mono: "Cascadia Code", monospace;
+  --font-cal: "Cal Sans", sans-serif;
+}
 
-    --primary: 270 80% 60%;
-    --primary-foreground: 0 0% 100%;
+:root {
+  --violet: 276.57, 100%, 58.82%;
+  --purple: 265.59, 99.03%, 40.39%;
+  --gray: 200, 1.94%, 69.61%;
+  --black: #000;
+  --white: #fff;
+  background: var(--color-black);
+  color: var(--color-white);
+}
 
-    --secondary: 240 15% 15%;
-    --secondary-foreground: 240 10% 90%;
-
-    --muted: 240 12% 16%;
-    --muted-foreground: 240 8% 55%;
-
-    --accent: 280 70% 65%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 240 12% 18%;
-    --input: 240 12% 18%;
-    --ring: 270 80% 60%;
-
-    --radius: 0.75rem;
-
-    --hero-glow: 270 90% 55%;
-    --hero-accent: 290 85% 70%;
-
-    --sidebar-background: 240 20% 8%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 270 80% 60%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 15% 15%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 12% 18%;
-    --sidebar-ring: 270 80% 60%;
-  }
+body {
+  max-width: 75vw;
+  margin: 0 auto;
 }
 
 @layer base {
-  * {
-    @apply border-border;
+  p {
+    font-family: var(--font-sans);
   }
-  body {
-    @apply bg-background text-foreground font-sans antialiased;
+
+  button {
+    cursor: pointer;
+  }
+
+  span,
+  a {
+    font-family: var(--font-mono);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-cal);
   }
 }
 
-@layer utilities {
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-[hsl(var(--primary))] via-[hsl(var(--hero-accent))] to-[hsl(var(--primary))];
-  }
+.pattern-stripes {
+  background-image: linear-gradient(
+    135deg,
+    currentColor 25%,
+    transparent 25%,
+    transparent 50%,
+    currentColor 50%,
+    currentColor 75%,
+    transparent 75%
+  );
+  background-size: 5px 5px;
 }
 
-@keyframes gradient-drift {
+@keyframes slideRight {
   0% {
-    transform: scale(1.1) translate(0%, 0%) rotate(0deg);
-  }
-  25% {
-    transform: scale(1.15) translate(3%, -2%) rotate(2deg);
-  }
-  50% {
-    transform: scale(1.2) translate(-2%, 3%) rotate(-1deg);
-  }
-  75% {
-    transform: scale(1.15) translate(-3%, -1%) rotate(1deg);
+    opacity: 0;
+    transform: translateX(-30px);
   }
   100% {
-    transform: scale(1.1) translate(0%, 0%) rotate(0deg);
+    opacity: 1;
+    transform: translateX(0);
   }
-}
-
-.animate-gradient-drift {
-  animation: gradient-drift 20s ease-in-out infinite;
 }
