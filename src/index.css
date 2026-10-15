@@ -8,7 +8,8 @@
   --color-black: var(--black);
   --color-white: var(--white);
 
-  --radius: 6px;
+  --radius-md: 8px;
+  --radius: 8px;
 
   --font-sans: "Lexend", sans-serif;
   --font-mono: "Cascadia Code", monospace;

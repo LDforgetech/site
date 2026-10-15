@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="px-px bg-white/10 max-w-265.5 m-auto ">
       <Navigation />
-      <div className="text-white mt-px grid grid-cols-2 gap-px">
-        <section className="font-cal bg-black pt-5 pb-12 px-6 rounded-l-md">
+      <div className="text-white mt-px grid lg:grid-cols-2 grid-cols-1 gap-px">
+        <section className="font-cal bg-black pt-5 pb-12 px-6 rounded-md lg:rounded-r-none">
           <div className="pattern-stripes bg-black text-violet/40 rounded py-4 px-6">
             <h1 className="max-w-96 text-white text-4xl">
               Transformamos ideias em software de alto impacto
@@ -27,11 +27,11 @@ function App() {
             </Button>
           </div>
         </section>
-        <section className="font-cal text-4xl relative bg-black py-5 px-6 rounded-r-md">
+        <section className="font-cal text-4xl bg-black py-5 px-6 pb-28 lg:pb-5 rounded-md lg:rounded-l-none">
           <SlideHeader />
         </section>
       </div>
-      <section className="bg-black mt-px rounded relative px-6 py-24 flex justify-between">
+      <section className="bg-black mt-px rounded relative px-6 py-24 flex flex-col lg:flex-row justify-between">
         <div>
           <span className="text-gray/25 font-bold text-sm">_-__-_--</span>
           <h1 className=" text-white text-4xl mb-2 max-w-74.5">
@@ -44,8 +44,9 @@ function App() {
         </div>
         <CarrouselSlide />
       </section>
-      <section className="grid grid-cols-4 grid-rows-2  mt-px gap-px">
-        <div className="col-span-2 row-span-2 bg-black pl-6 flex flex-col justify-center">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 mt-px gap-px">
+        <div className="col-span-1 md:col-span-2 lg:col-span-2 lg:row-span-2 bg-black p-6 lg:p-0 lg:pl-6 flex flex-col justify-center rounded-md lg:rounded-r-none">
+          <span className="text-gray/25 font-bold text-sm">_-__-_--</span>
           <h1 className="text-white text-4xl mb-4 max-w-86.5">
             Tecnologia que gera resultados reais
           </h1>
@@ -60,61 +61,64 @@ function App() {
             retorno do seu investimento.
           </p>
         </div>
-        <div className="col-span-1 row-span-1 bg-black relative flex flex-col group cursor-default overflow-hidden">
-          <div className="absolute z-50 top-0 left-0 w-full h-full bg-linear-to-r from-black from-20% to-transparent pointer-events-none transition-all duration-500 ease-out group-hover:from-15%"></div>
-          <div className="px-2 py-3 pattern-stripes text-gray/10 transition-colors duration-500 ease-out group-hover:text-violet/20">
+        <div className="col-span-1 row-span-1 bg-black relative flex flex-col group cursor-default overflow-hidden rounded-md md:rounded-r-none lg:rounded-none">
+          <div className="absolute z-50 top-0 left-0 w-full h-full bg-linear-to-r from-black from-15% md:from-20% pointer-events-none transition-all duration-500 ease-out md:group-hover:from-15%"></div>
+          <div className="px-2 py-3 flex-1 pattern-stripes text-violet/20 md:text-gray/10 transition-colors duration-500 ease-out md:group-hover:text-violet/20">
             <h2 className="text-3xl text-white relative z-50">
               Arquitetura Moderna
             </h2>
-            <p className="text-sm text-gray max-w-55 relative z-50 opacity-0 -translate-x-4 transition-all duration-500 ease-out group-hover:translate-x-0 group-hover:opacity-100">
+            <p className="text-sm text-gray max-w-55 relative z-50 opacity-100 translate-x-0 md:opacity-0 md:-translate-x-4 transition-all duration-500 ease-out md:group-hover:translate-x-0 md:group-hover:opacity-100">
               Foco em ecossistemas robustos com as melhores ferramentas do
               mercado.
             </p>
           </div>
-          <div className="flex justify-between px-4 py-1.5 border-t border-gray/15 mt-1.5 text-gray/15 transition-colors duration-500 ease-out group-hover:border-gray/50 group-hover:text-gray/50">
+          <div className="flex justify-between px-4 py-1.5 border-t mt-1.5 transition-colors duration-500 ease-out border-gray/50 text-gray/50 md:border-gray/15 md:text-gray/15 md:group-hover:border-gray/50 md:group-hover:text-gray/50">
             <span className="relative z-50">_-__-_--</span>
             <span>//</span>
           </div>
         </div>
-        <div className="col-span-1 row-span-1 bg-black relative flex flex-col group cursor-default overflow-hidden rounded-r-lg">
-          <div className="absolute z-50 top-0 left-0 w-full h-full bg-linear-to-l from-black from-20% to-transparent pointer-events-none transition-all duration-500 ease-out group-hover:from-15%"></div>
-          <div className="px-2 py-3 flex-1 pattern-stripes text-gray/10 transition-colors duration-500 ease-out group-hover:text-violet/20">
+
+        <div className="col-span-1 row-span-1 bg-black relative flex flex-col group cursor-default overflow-hidden rounded-md md:rounded-l-none">
+          <div className="absolute z-50 top-0 left-0 w-full h-full bg-linear-to-l from-black from-15% md:from-20% pointer-events-none transition-all duration-500 ease-out md:group-hover:from-15%"></div>
+          <div className="px-2 py-3 flex-1 pattern-stripes text-violet/20 md:text-gray/10 transition-colors duration-500 ease-out md:group-hover:text-violet/20">
             <h2 className="text-3xl text-white relative z-50">Performance</h2>
-            <p className="text-sm text-gray max-w-55 relative z-50 opacity-0 -translate-x-4 transition-all duration-500 ease-out group-hover:translate-x-0 group-hover:opacity-100">
+            <p className="text-sm text-gray max-w-55 relative z-50 opacity-100 translate-x-0 md:opacity-0 md:-translate-x-4 transition-all duration-500 ease-out md:group-hover:translate-x-0 md:group-hover:opacity-100">
               Produtos otimizados para carregar rápido e reter usuários.
             </p>
           </div>
-          <div className="flex justify-between px-4 py-1.5 border-t border-gray/15 mt-1.5 text-gray/15 transition-colors duration-500 ease-out group-hover:border-gray/50 group-hover:text-gray/50">
+          <div className="flex justify-between px-4 py-1.5 border-t mt-1.5 transition-colors duration-500 ease-out border-gray/50 text-gray/50 md:border-gray/15 md:text-gray/15 md:group-hover:border-gray/50 md:group-hover:text-gray/50">
             <span>//</span>
             <span className="z-50 relative">_-__-_--</span>
           </div>
         </div>
-        <div className="col-span-1 row-span-1 bg-black relative flex flex-col group cursor-default overflow-hidden">
-          <div className="absolute z-50 top-0 left-0 w-full h-full bg-linear-to-r from-black from-20% to-transparent pointer-events-none transition-all duration-500 ease-out group-hover:from-15%"></div>
-          <div className="px-2 py-3 pattern-stripes text-gray/10 transition-colors duration-500 ease-out group-hover:text-violet/20">
+
+        <div className="col-span-1 row-span-1 bg-black relative flex flex-col group cursor-default overflow-hidden rounded-md md:rounded-r-none lg:rounded-none">
+          <div className="absolute z-50 top-0 left-0 w-full h-full bg-linear-to-r from-black from-15% md:from-20% pointer-events-none transition-all duration-500 ease-out md:group-hover:from-15%"></div>
+          <div className="px-2 py-3 flex-1 pattern-stripes text-violet/20 md:text-gray/10 transition-colors duration-500 ease-out md:group-hover:text-violet/20">
             <h2 className="text-3xl text-white relative z-50">
               Transparência Total
             </h2>
-            <p className="text-sm text-gray max-w-55 relative z-50 opacity-0 -translate-x-4 transition-all duration-500 ease-out group-hover:translate-x-0 group-hover:opacity-100">
+            <p className="text-sm text-gray max-w-55 relative z-50 opacity-100 translate-x-0 md:opacity-0 md:-translate-x-4 transition-all duration-500 ease-out md:group-hover:translate-x-0 md:group-hover:opacity-100">
               Acompanhamento de perto em cada etapa do desenvolvimento.
             </p>
           </div>
-          <div className="flex justify-between px-4 py-1.5 border-t border-gray/15 mt-1.5 text-gray/15 transition-colors duration-500 ease-out group-hover:border-gray/50 group-hover:text-gray/50">
+          <div className="flex justify-between px-4 py-1.5 border-t mt-1.5 transition-colors duration-500 ease-out border-gray/50 text-gray/50 md:border-gray/15 md:text-gray/15 md:group-hover:border-gray/50 md:group-hover:text-gray/50">
             <span className="relative z-50">_-__-_--</span>
             <span>//</span>
           </div>
         </div>
-        <div className="col-span-1 row-span-1 bg-black relative flex flex-col group cursor-default overflow-hidden rounded-r-lg">
-          <div className="absolute z-50 top-0 left-0 w-full h-full bg-linear-to-l from-black from-20% to-transparent pointer-events-none transition-all duration-500 ease-out group-hover:from-15%"></div>
-          <div className="px-2 py-3 flex-1 pattern-stripes text-gray/10 transition-colors duration-500 ease-out group-hover:text-violet/20">
+
+        <div className="col-span-1 row-span-1 bg-black relative flex flex-col group cursor-default overflow-hidden rounded-md md:rounded-l-none">
+          <div className="absolute z-50 top-0 left-0 w-full h-full bg-linear-to-l from-black from-15% md:from-20% pointer-events-none transition-all duration-500 ease-out md:group-hover:from-15%"></div>
+          <div className="px-2 py-3 flex-1 pattern-stripes text-violet/20 md:text-gray/10 transition-colors duration-500 ease-out md:group-hover:text-violet/20">
             <h2 className="text-3xl text-white relative z-50">
               Escalabilidade e Código Limpo
             </h2>
-            <p className="text-sm text-gray max-w-55 relative z-50 opacity-0 -translate-x-4 transition-all duration-500 ease-out group-hover:translate-x-0 group-hover:opacity-100">
+            <p className="text-sm text-gray max-w-55 relative z-50 opacity-100 translate-x-0 md:opacity-0 md:-translate-x-4 transition-all duration-500 ease-out md:group-hover:translate-x-0 md:group-hover:opacity-100">
               Sistemas preparados para crescer junto com a sua empresa.
             </p>
           </div>
-          <div className="flex justify-between px-4 py-1.5 border-t border-gray/15 mt-1.5 text-gray/15 transition-colors duration-500 ease-out group-hover:border-gray/50 group-hover:text-gray/50">
+          <div className="flex justify-between px-4 py-1.5 border-t mt-1.5 transition-colors duration-500 ease-out border-gray/50 text-gray/50 md:border-gray/15 md:text-gray/15 md:group-hover:border-gray/50 md:group-hover:text-gray/50">
             <span>//</span>
             <span className="z-50 relative">_-__-_--</span>
           </div>
@@ -139,7 +143,7 @@ function App() {
           <span>///</span>
           <span className="z-50 relative">_-__-_--</span>
         </div>
-        <div className="flex justify-between">
+        <div className="flex flex-col md:flex-row justify-between">
           <div className="">
             <img src={Logo} alt="Logo" />
             <p className="text-gray text-sm max-w-88 mt-2">
@@ -148,11 +152,11 @@ function App() {
             </p>
           </div>
           <div>
-            <h2 className="text-3xl text-right">Contato</h2>
-            <ul className="flex flex-col items-end">
+            <h2 className="text-3xl mt-6 lg:mt-0 text-left">Contato</h2>
+            <ul className="flex flex-col items-start md:items-end">
               <li className="pattern-stripes rounded mt-3 hover:text-violet/50 group text-gray/15 p-0.5 m-0">
                 <a
-                  className="bg-black rounded flex gap-2 items-center text-gray/60 group-hover:text-gray px-2 py-1"
+                  className="bg-black rounded flex gap-2 text-gray/60 group-hover:text-gray px-2 py-1"
                   href=""
                 >
                   <svg
@@ -198,7 +202,7 @@ function App() {
           <p className="text-gray text-sm">
             LD Forgetech © 2026 - Alguns direitos reservados.
           </p>
-          <p className="text-gray text-sm">///</p>
+          <p className="text-gray text-sm hidden md:block">///</p>
         </div>
       </footer>
     </div>

@@ -6,7 +6,6 @@ import imgSite from "../assets/carrousel/site.png";
 
 export default function CarrouselSlide() {
   const listaDeImagens = [imgAppWeb, imgEcommerce, imgPortfolio, imgSite];
-
   const [imagemAtivaIndex, setImagemAtivaIndex] = useState(0);
 
   function handleClick() {
@@ -22,15 +21,16 @@ export default function CarrouselSlide() {
 
     switch (posicaoRelativa) {
       case 0:
-        return "absolute top-0 translate-x-12 z-10 scale-90 opacity-60";
+        return "absolute lg:top-0 -top-3 lg:translate-x-[10%] translate-x-[8%] z-10 lg:scale-90 scale-80 opacity-60";
       case 1:
-        return "relative  translate-x-0 scale-100 z-50";
+        return "relative translate-x-0 scale-100 z-50";
       case 2:
-        return "absolute top-0 -translate-x-12 z-10 scale-90 opacity-60";
+        return "absolute lg:top-0 -top-3 lg:-translate-x-[10%] -translate-x-[8%] z-10 lg:scale-90 scale-80 opacity-60";
+      // return "absolute lg:top-0 -top-3 lg:-translate-x-[10%] -translate-x-[8%] z-10 lg:scale-90 scale-80 opacity-60";
       case 3:
-        return "absolute top-0 -translate-x-12 z-10 scale-80 opacity-40";
+        return "absolute top-0 translate-x-0 z-10 scale-50 opacity-0";
       default:
-        return "opacity-0 hidden";
+        return "hidden";
     }
   }
 
@@ -38,22 +38,22 @@ export default function CarrouselSlide() {
     <>
       <div>
         <div
-          className="pr-6 pl-6 cursor-pointer relative"
+          className="pr-6 pl-6 cursor-pointer relative flex justify-center mt-8"
           onClick={handleClick}
         >
           {listaDeImagens.map((imagemSrc, index) => {
             return (
               <img
                 key={index}
-                className={`m-auto rounded transition-all bg-black  duration-500 ${getEstiloRotativo(index)}`}
+                className={`rounded transition-all bg-black duration-500 ${getEstiloRotativo(index)}`}
                 src={imagemSrc}
                 alt={`Imagem ${index + 1}`}
               />
             );
           })}
         </div>
-        <div>
-          <div className="mt-2 text-gray/35 text-center cursor-pointer">
+        <div onClick={handleClick}>
+          <div className="mt-2 text-gray/35 text-center cursor-pointer select-none">
             {listaDeImagens.map((_, i) => (
               <span
                 key={i}
