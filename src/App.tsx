@@ -12,7 +12,7 @@ function App() {
       <div className="text-white mt-px grid lg:grid-cols-2 grid-cols-1 gap-px">
         <section className="font-cal bg-black pt-5 pb-12 px-6 rounded-md lg:rounded-r-none">
           <div className="pattern-stripes bg-black text-violet/40 rounded py-4 px-6">
-            <h1 className="max-w-96 text-white text-4xl">
+            <h1 className="max-w-96 text-white text-3xl lg:text-4xl">
               Transformamos ideias em software de alto impacto
             </h1>
           </div>
@@ -127,7 +127,7 @@ function App() {
       <section className="bg-black relative mt-px rounded overflow-hidden py-8">
         <div className="bg-linear-to-r absolute z-40 top-0 right-0 from-violet via-black to-violet w-full h-full opacity-10"></div>
         <div className="max-w-104 m-auto">
-          <h2 className="text-4xl text-center mb-4 relative z-50">
+          <h2 className="text-2xl lg:text-4xl text-center mb-4 relative z-50">
             Pronto para transformar sua ideia em realidade?
           </h2>
           <div className="text-center relative z-50">

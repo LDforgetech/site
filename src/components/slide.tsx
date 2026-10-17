@@ -35,7 +35,8 @@ export default function SlideHeader() {
 
   const [imagemAtivaIndex, setImagemAtivaIndex] = useState(0);
 
-  function handleClick() {
+  function handleClick(e: React.MouseEvent) {
+    console.log(e.stopPropagation());
     setImagemAtivaIndex(
       (indexAtual) => (indexAtual + 1) % listaDeImagens.length,
     );
