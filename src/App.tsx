@@ -12,7 +12,7 @@ function App() {
       <div className="text-white mt-px grid lg:grid-cols-2 grid-cols-1 gap-px">
         <section className="font-cal bg-black pt-5 pb-12 px-6 rounded-md lg:rounded-r-none">
           <div className="pattern-stripes bg-black text-violet/40 rounded py-4 px-6">
-            <h1 className="max-w-96 text-white text-3xl lg:text-4xl">
+            <h1 className="max-w-96 text-white text-2xl lg:text-4xl">
               Transformamos ideias em software de alto impacto
             </h1>
           </div>
