@@ -21,10 +21,12 @@ function App() {
             crescimento do seu negócio com tecnologia de ponta.
           </p>
           <div className="mt-10">
-            <Button>
-              Fale Conosco{" "}
-              <ArrowRight className="transition-transform group-hover:-rotate-z-12" />
-            </Button>
+            <a target="_blank" href="https://wa.me/5511972634254">
+              <Button>
+                Fale Conosco{" "}
+                <ArrowRight className="transition-transform group-hover:-rotate-z-12" />
+              </Button>
+            </a>
           </div>
         </section>
         <section className="font-cal text-4xl bg-black py-5 px-6 pb-28 lg:pb-5 rounded-md lg:rounded-l-none">
@@ -131,10 +133,12 @@ function App() {
             Pronto para transformar sua ideia em realidade?
           </h2>
           <div className="text-center relative z-50">
-            <Button>
-              Falar conosco
-              <ArrowRight className="transition-transform group-hover:-rotate-z-12" />
-            </Button>
+            <a target="_blank" href="https://wa.me/5511972634254">
+              <Button>
+                Fale conosco
+                <ArrowRight className="transition-transform group-hover:-rotate-z-12" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -171,7 +175,7 @@ function App() {
                   Whatsapp
                 </a>
               </li>
-              <li className="pattern-stripes rounded mt-3 hover:text-violet/50 group text-gray/15 p-0.5 m-0">
+              {/* <li className="pattern-stripes rounded mt-3 hover:text-violet/50 group text-gray/15 p-0.5 m-0">
                 <a
                   className="bg-black rounded flex gap-2 items-center text-gray/60 group-hover:text-gray px-2 py-1"
                   href=""
@@ -188,7 +192,7 @@ function App() {
                   </svg>
                   Linkedin
                 </a>
-              </li>
+              </li> */}
               <li className="pattern-stripes rounded mt-3 hover:text-violet/50 group text-gray/15 p-0.5 m-0">
                 <span className="bg-black rounded flex gap-2 items-center text-gray/60 group-hover:text-gray px-2 py-1">
                   <Mail className="text-violet" />

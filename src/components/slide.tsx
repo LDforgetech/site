@@ -1,8 +1,8 @@
 import { useState } from "react";
 import imgQpz from "../assets/slide-header/img1.png";
 import imgDr from "../assets/slide-header/img3.png";
-import imgOpenCircle from "../assets/slide-header/img2.png";
-import imgConversaiada from "../assets/slide-header/img4.png";
+// import imgOpenCircle from "../assets/slide-header/img2.png";
+// import imgConversaiada from "../assets/slide-header/img4.png";
 import { MoveRight } from "lucide-react";
 
 export default function SlideHeader() {
@@ -19,18 +19,18 @@ export default function SlideHeader() {
       desc: "Site Institucional",
       url: "https://grupodr.com.br",
     },
-    {
-      name: "Conversaiada",
-      path: imgConversaiada,
-      desc: "Plaforma de podcast",
-      url: "https://conversaiada.com.br",
-    },
-    {
-      name: "Open circle",
-      path: imgOpenCircle,
-      desc: "Site Institucional",
-      url: "https://opencircle.com.br",
-    },
+    // {
+    //   name: "Conversaiada",
+    //   path: imgConversaiada,
+    //   desc: "Plaforma de podcast",
+    //   url: "https://conversaiada.com.br",
+    // },
+    // {
+    //   name: "Open circle",
+    //   path: imgOpenCircle,
+    //   desc: "Site Institucional",
+    //   url: "https://opencircle.com.br",
+    // },
   ];
 
   const [imagemAtivaIndex, setImagemAtivaIndex] = useState(0);

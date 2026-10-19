@@ -8,7 +8,8 @@ export default function Navigation() {
       <ul className="flex items-center gap-4">
         <li>
           <a
-            href="#contato"
+            target="_blank"
+            href="https://wa.me/5511972634254"
             className="text-sm md:text-base text-gray hover:text-white transition-colors duration-200"
           >
             Contato
