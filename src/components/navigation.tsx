@@ -9,7 +9,7 @@ export default function Navigation() {
         <li>
           <a
             target="_blank"
-            href="https://wa.me/5511972634254"
+            href="https://wa.me/5511917395633"
             className="text-sm md:text-base text-gray hover:text-white transition-colors duration-200"
           >
             Contato

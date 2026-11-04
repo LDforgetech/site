@@ -31,6 +31,12 @@ body {
   margin: 0 auto;
 }
 
+@media (max-width: 450px) {
+  body {
+    max-width: 88vw;
+  }
+}
+
 @layer base {
   p {
     font-family: var(--font-sans);

@@ -1,8 +1,6 @@
 import { useState } from "react";
 import imgQpz from "../assets/slide-header/img1.png";
 import imgDr from "../assets/slide-header/img3.png";
-// import imgOpenCircle from "../assets/slide-header/img2.png";
-// import imgConversaiada from "../assets/slide-header/img4.png";
 import { MoveRight } from "lucide-react";
 
 export default function SlideHeader() {
@@ -36,7 +34,7 @@ export default function SlideHeader() {
   const [imagemAtivaIndex, setImagemAtivaIndex] = useState(0);
 
   function handleClick(e: React.MouseEvent) {
-    console.log(e.stopPropagation());
+    e.stopPropagation();
     setImagemAtivaIndex(
       (indexAtual) => (indexAtual + 1) % listaDeImagens.length,
     );
@@ -74,6 +72,7 @@ export default function SlideHeader() {
                 |
               </span>
             ))}
+            <span className="ml-5 font-normal">projetos</span>
           </div>
           <span>_-__-_--</span>
         </div>
