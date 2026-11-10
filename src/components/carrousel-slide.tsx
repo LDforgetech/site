@@ -57,7 +57,9 @@ export default function CarrouselSlide() {
             {listaDeImagens.map((_, i) => (
               <span
                 key={i}
-                className={i === imagemAtivaIndex ? "text-white" : ""}
+                className={`transition-colors duration-300 ${
+                  i === imagemAtivaIndex ? "text-white" : ""
+                }`}
               >
                 |
               </span>

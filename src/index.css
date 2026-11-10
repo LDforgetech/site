@@ -84,3 +84,12 @@ body {
     transform: translateX(0);
   }
 }
+
+.slide-indicator {
+  color: hsl(var(--gray) / 25%);
+  transition: color 300ms ease;
+}
+
+.slide-indicator[data-active="true"] {
+  color: #fff;
+}

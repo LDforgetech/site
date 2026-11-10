@@ -58,11 +58,13 @@ export default function SlideHeader() {
     <>
       <div>
         <div className="text-gray/25 text-sm font-bold flex justify-between items-center mb-10">
-          <div className="select-none">
+          <div className="flex select-none">
             {listaDeImagens.map((_, i) => (
               <span
                 key={i}
-                className={i === imagemAtivaIndex ? "text-white" : ""}
+                className={`transition-colors duration-300 ${
+                  i === imagemAtivaIndex ? "text-white" : ""
+                }`}
               >
                 |
               </span>
